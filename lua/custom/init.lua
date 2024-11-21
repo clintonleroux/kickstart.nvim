@@ -1,2 +1,2 @@
-require 'lua.custom.configs.keymap'
+require 'custom.configs.keymap'
 return {}
