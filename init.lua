@@ -541,8 +541,8 @@ require('lazy').setup({
         -- ts_ls = {},
         --
 
-        csharp_ls = {},
-
+        --csharp_ls = {},
+        omnisharp = {}
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},
