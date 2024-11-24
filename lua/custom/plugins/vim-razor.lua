@@ -2,5 +2,5 @@
 -- https://github.com/jlcrochet/vim-razor
 
 return {
-	'windwp/nvim-autopairs'
+	'jlcrochet/vim-razor'
 }
