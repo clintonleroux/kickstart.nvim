@@ -231,3 +231,22 @@ sudo pacman -S --noconfirm --needed gcc make git ripgrep fd unzip neovim
 ```
 </details>
 
+<details><summary>NixOS Install Steps</summary>
+
+```
+{
+  systemd.user.services.cloneKickstartNvim = {
+    description = "Clone kickstart.nvim repository";
+
+    serviceConfig = {
+      ExecStart = "${pkgs.git}/bin/git clone https://github.com/clintonleroux/kickstart.nvim.git ${XDG_CONFIG_HOME:-$HOME/.config}/nvim";
+      Type = "oneshot";
+      User = "your-username"; # Replace with your username
+      Environment = "HOME=/home/your-username" "XDG_CONFIG_HOME=/home/your-username/.config";
+    };
+
+    wantedBy = [ "default.target" ];
+  };
+}
+```
+</details>
