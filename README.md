@@ -235,6 +235,21 @@ sudo pacman -S --noconfirm --needed gcc make git ripgrep fd unzip neovim
 
 ```
 {
+    environment.systemPackages = with pkgs; [
+    neovim
+    wget
+    gcc
+    gnumake
+    ripgrep
+    fd
+    unzip
+    git
+    google-chrome
+    kitty
+    nerdfonts
+  ];
+
+
   systemd.user.services.cloneKickstartNvim = {
     description = "Clone kickstart.nvim repository";
 
